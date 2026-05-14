@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/* ── Typography ─────────────────────────────────────── */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "DM Sans", sans-serif;
+}
+.display {
+  font-family: "Fraunces", Georgia, serif;
+  font-feature-settings: "ss01";
+}
+
+/* ── Brand colour tokens ────────────────────────────── */
+:root {
+  --hrhs-navy: #1a1f4f;
+  --hrhs-navy-dark: #131739;
+  --hrhs-crimson: #a8233e;
+  --hrhs-crimson-dark: #871a31;
+}
+
+/* ── Brand utility classes ──────────────────────────── */
+.bg-hrhs-navy {
+  background-color: var(--hrhs-navy);
+}
+.bg-hrhs-navy:hover,
+.hover\:bg-hrhs-navy-dark:hover {
+  background-color: var(--hrhs-navy-dark);
+}
+.bg-hrhs-crimson {
+  background-color: var(--hrhs-crimson);
+}
+.hover\:bg-hrhs-crimson-dark:hover {
+  background-color: var(--hrhs-crimson-dark);
+}
+.text-hrhs-navy {
+  color: var(--hrhs-navy);
+}
+.text-hrhs-crimson {
+  color: var(--hrhs-crimson);
+}
+.border-hrhs-navy {
+  border-color: var(--hrhs-navy);
+}
+.focus\:border-hrhs-navy:focus {
+  border-color: var(--hrhs-navy);
+}
+
+/* ── Urgency card styles ────────────────────────────── */
+.urgency-critical {
+  background: #fef2f2;
+  border-left-color: var(--hrhs-crimson);
+}
+.urgency-warning {
+  background: #fffbeb;
+  border-left-color: #d97706;
+}
+.urgency-ok {
+  background: white;
+  border-left-color: #d6d3d1;
+}
+.urgency-expired {
+  background: #fafaf9;
+  border-left-color: #57534e;
+  opacity: 0.7;
+}
+
+/* ── Expiry pill styles ─────────────────────────────── */
+.pill-critical {
+  background: var(--hrhs-crimson);
+  color: white;
+}
+.pill-warning {
+  background: #d97706;
+  color: white;
+}
+.pill-ok {
+  background: #f5f5f4;
+  color: #57534e;
+}
+.pill-expired {
+  background: #57534e;
+  color: white;
+}
