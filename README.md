@@ -13,13 +13,13 @@ Hao Ren Hao Shi (好人好事) is a Singapore-based community charity running fo
 - A shared, mobile-first inventory system where volunteers log incoming and returning food with expiry date, quantity, and location
 - All volunteers across all locations see a single shared view sorted by soonest expiry
 - Admins manage the inventory (add, edit, clear, adjust); guests get read-only access
-- Deployed publicly at **https://hrhs-inventory.vercel.app/**
+- Deployed publicly at **https://hrhs-inventory-demo.vercel.app/**
 
 ---
 
 ## Demo
 
-**Live URL:** https://hrhs-inventory.vercel.app/
+**Live URL:** https://hrhs-inventory-demo.vercel.app/
 
 ### Walkthrough
 
@@ -114,7 +114,7 @@ Admins see an **Export CSV** button. The downloaded file opens in Excel or Googl
 git clone https://github.com/lnulhak/hrhs-inventory.git
 cd hrhs-inventory
 npm install
-cp .env.local.example .env.local
+cp .env.sample .env.local
 # Fill in your Supabase URL and anon key in .env.local
 npm run dev
 # Open http://localhost:3000
@@ -151,14 +151,15 @@ hrhs-inventory/
 │   ├── schema.sql           # Supabase table definition and RLS policies
 │   └── seed.sql             # Sample data for local/staging setup
 ├── docs/
+│   ├── BRIEF.md             # Original project brief
 │   ├── DEPLOYMENT.md        # Env vars, Vercel setup, Supabase project setup
 │   ├── MIGRATION.md         # Steps to move accounts from personal to HRHS email
 │   └── SCHEMA.md            # Table schema and RLS policy reference
-├── public/
+├── assets/
 │   └── screenshots/         # UI screenshots for README
+├── public/                  # Next.js static file serving
 ├── tests/                   # Reserved — tests are future work (see Reflection)
-├── hrhs-inventory.jsx       # Original single-file React prototype (preserved for reference)
-└── CLAUDE_CODE_BRIEF.md     # Project brief used with Claude Code
+└── .env.sample              # Environment variable template
 ```
 
 ---
