@@ -1,5 +1,7 @@
 "use client";
 
+export const dynamic = "force-dynamic";
+
 import React, { useState, useMemo, useEffect } from "react";
 import {
   Plus, Search, MapPin, Package, AlertCircle, Check, X,
@@ -26,7 +28,8 @@ function normalise(row) {
 }
 
 export default function HRHSInventory() {
-  const supabase = createClient();
+  // createClient() is only called inside effects/handlers (client-side only),
+  // never at render time, so the build doesn't need the env vars at prerender.
 
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -56,6 +59,8 @@ export default function HRHSInventory() {
 
   // ── Session check on mount ────────────────────────────────────────────────
   useEffect(() => {
+    const supabase = createClient();
+
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session) {
         setAuthState({ role: "admin", username: session.user.email });
@@ -77,6 +82,7 @@ export default function HRHSInventory() {
   }, [authState.role]);
 
   const loadItems = async () => {
+    const supabase = createClient();
     setLoading(true);
     const { data, error } = await supabase
       .from("items")
@@ -92,6 +98,7 @@ export default function HRHSInventory() {
       setLoginError("Please enter both email and password.");
       return;
     }
+    const supabase = createClient();
     const { error } = await supabase.auth.signInWithPassword({
       email: loginForm.email.trim(),
       password: loginForm.password,
@@ -132,7 +139,7 @@ export default function HRHSInventory() {
   };
 
   const handleLogout = async () => {
-    if (isAdmin) await supabase.auth.signOut();
+    if (isAdmin) await createClient().auth.signOut();
     setAuthState({ role: null, username: "" });
     setLoginForm({ email: "", password: "" });
     setForgotEmail("");
@@ -224,7 +231,7 @@ export default function HRHSInventory() {
     if (!newItem.name || !newItem.qty || !newItem.expiry || !newItem.loggedBy) return;
     if (newItem.location === "Other" && !finalLocation) return;
 
-    const { error } = await supabase.from("items").insert({
+    const { error } = await createClient().from("items").insert({
       name:      newItem.name,
       brand:     newItem.brand || null,
       quantity:  parseInt(newItem.qty),
@@ -249,7 +256,7 @@ export default function HRHSInventory() {
     const finalLocation = editingItem.location === "Other" ? (editingItem.customLocation || "").trim() : editingItem.location;
     if (editingItem.location === "Other" && !finalLocation) return;
 
-    const { error } = await supabase
+    const { error } = await createClient()
       .from("items")
       .update({
         name:     editingItem.name,
@@ -269,7 +276,7 @@ export default function HRHSInventory() {
   };
 
   const markAllTaken = async (id) => {
-    const { error } = await supabase
+    const { error } = await createClient()
       .from("items")
       .update({ status: "taken" })
       .eq("id", id);
@@ -288,7 +295,7 @@ export default function HRHSInventory() {
     if (left === 0) {
       await markAllTaken(item.id);
     } else {
-      const { error } = await supabase
+      const { error } = await createClient()
         .from("items")
         .update({ quantity: left })
         .eq("id", item.id);
