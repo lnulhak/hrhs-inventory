@@ -25,19 +25,19 @@ Hao Ren Hao Shi (好人好事) is a Singapore-based community charity running fo
 
 Open the URL. You'll see the HRHS login screen with admin sign-in and a "Continue as guest" link.
 
-![Login screen](public/screenshots/01-login.png)
+![Login screen](assets/screenshots/01-login.png)
 
 **2. Inventory list (admin view)**
 
 Sign in as admin. Items are sorted by soonest expiry by default. Use the search bar, location chips, or sort dropdown to filter.
 
-![Inventory list — admin](public/screenshots/02-inventory-admin.png)
+![Inventory list — admin](assets/screenshots/02-inventory-admin.png)
 
 **3. Log a new item**
 
 Click **Log food**. Fill in name, quantity, unit, expiry date, and location. Required fields show red borders and per-field messages if left blank. Click **Save**.
 
-![Add item modal](public/screenshots/03-add-item.png)
+![Add item modal](assets/screenshots/03-add-item.png)
 
 **4. Distribute stock**
 
@@ -45,20 +45,20 @@ Tap an item to reveal actions:
 - **Clear Stock** — marks the entire batch as taken (with confirmation prompt)
 - **Adjust Stock** — enter how many units remain after partial distribution
 
-![Clear Stock confirmation](public/screenshots/04-clear-stock.png)
-![Adjust Stock quantity input](public/screenshots/05-adjust-stock.png)
+![Clear Stock confirmation](assets/screenshots/04-clear-stock.png)
+![Adjust Stock quantity input](assets/screenshots/05-adjust-stock.png)
 
 **5. Guest view**
 
 Click **Sign out**, then **Continue as guest**. The inventory is visible but Log food / Edit / Clear / Adjust buttons are hidden.
 
-![Guest view — read only](public/screenshots/06-guest-view.png)
+![Guest view — read only](assets/screenshots/06-guest-view.png)
 
 **6. CSV export**
 
 Admins see an **Export CSV** button. The downloaded file opens in Excel or Google Sheets with all fields.
 
-![CSV in Google Sheets](public/screenshots/07-csv-export.png)
+![CSV in Google Sheets](assets/screenshots/07-csv-export.png)
 
 ---
 
