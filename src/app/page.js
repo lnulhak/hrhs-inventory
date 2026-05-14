@@ -459,6 +459,10 @@ export default function HRHSInventory() {
   return (
     <div className="min-h-screen bg-stone-50">
 
+      <div className="bg-amber-50 border-b border-amber-200 text-amber-800 text-xs text-center py-2 px-4">
+        Assessment demo — not an official Hao Ren Hao Shi system. Data is fictional.
+      </div>
+
       <header className="bg-hrhs-navy text-stone-50 px-5 py-6">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-1 gap-3">
