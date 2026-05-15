@@ -64,8 +64,8 @@ DEMO_PASS=your_chosen_password
 ## 3. Local development
 
 ```bash
-git clone https://github.com/lnulhak/hrhs-inventory.git
-cd hrhs-inventory
+git clone https://github.com/lnulhak/abc-inventory.git
+cd abc-inventory
 npm install
 cp .env.sample .env.local
 # Edit .env.local with your Supabase credentials and chosen DEMO_USER/DEMO_PASS

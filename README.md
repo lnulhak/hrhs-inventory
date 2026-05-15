@@ -53,7 +53,7 @@ See the [Installation](#installation) section below.
 
 **1. Login screen**
 
-Open the URL. You'll see the HRHS login screen with admin sign-in and a "Continue as guest" link.
+Open the URL. You'll see the ABC login screen with admin sign-in and a "Continue as guest" link.
 
 ![Login screen](assets/screenshots/01-login.png)
 
