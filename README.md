@@ -13,7 +13,7 @@ ABC is a community charity running food distribution out of a warehouse and comm
 - A shared, mobile-first inventory system where volunteers log incoming and returning food with expiry date, quantity, and location
 - All volunteers across all locations see a single shared view sorted by soonest expiry
 - Admins manage the inventory (add, edit, clear, adjust); guests get read-only access
-- Deployed publicly at **https://hrhs-inventory-demo.vercel.app/** with password-protection (cached, for first time access only)
+- Deployed publicly at **https://abc-inventory-demo.vercel.app/** with password-protection (cached, for first time access only)
 
 ---
 
