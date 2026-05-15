@@ -1,12 +1,12 @@
 # Inventory Management System
 
-> **Assessment demo** — this is a prototype built as an academic submission. It is not affiliated with or officially approved by any company. All data in the live demo is fictional. A production deployment would require the organisation's consent and account ownership transfer per [`docs/MIGRATION.md`](docs/MIGRATION.md).
+> **Assessment demo** — this is a prototype built as an academic submission. It is not affiliated with or officially approved by ABC. All data in the live demo is fictional. A production deployment would require the organisation's consent and account ownership transfer per [`docs/MIGRATION.md`](docs/MIGRATION.md).
 
 ## Overview
 
 ### Problem
 
- The client is a Singapore-based community charity running food distribution out of a warehouse and community marts. Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, and only one part-timer keeping manual records that were often inaccessible to volunteers, the result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored if the part-timer isn't working.
+ABC is a community charity running food distribution out of a warehouse and community marts. Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, and only one part-timer keeping manual records that were often inaccessible to volunteers, the result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored if the part-timer isn't working.
 
 ### Outcome
 

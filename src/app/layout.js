@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "HRHS Inventory",
-  description: "Hao Ren Hao Shi Inventory Management System",
+  title: "ABC Inventory",
+  description: "ABC Inventory Management System",
 };
 
 export default function RootLayout({ children }) {

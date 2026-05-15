@@ -307,8 +307,8 @@ export default function HRHSInventory() {
       <div className="min-h-screen bg-stone-50 flex items-center justify-center px-5 py-10">
         <div className="w-full max-w-sm">
           <div className="text-center mb-8">
-            <div className="display text-3xl font-semibold text-hrhs-navy leading-none">好人好事</div>
-            <div className="display text-base font-medium text-hrhs-navy mt-2">Hao Ren Hao Shi</div>
+            <div className="display text-3xl font-semibold text-hrhs-navy leading-none">ABC</div>
+            <div className="display text-base font-medium text-hrhs-navy mt-2">ABC Charity Drive</div>
             <div className="text-xs text-stone-500 uppercase tracking-wider mt-2">Inventory Management System</div>
             <div className="w-12 h-px bg-hrhs-crimson mx-auto mt-4"></div>
           </div>
@@ -442,7 +442,7 @@ export default function HRHSInventory() {
     <div className="min-h-screen bg-stone-50">
 
       <div className="bg-amber-50 border-b border-amber-200 text-amber-800 text-xs text-center py-2 px-4">
-        Assessment demo — not an official Hao Ren Hao Shi system. Data is fictional.
+        Assessment demo — not an official ABC system. Data is fictional.
       </div>
 
       <header className="bg-hrhs-navy text-stone-50 px-5 py-6">
@@ -450,7 +450,7 @@ export default function HRHSInventory() {
           <div className="flex items-center justify-between mb-1 gap-3">
             <div className="min-w-0">
               <div className="display text-xl font-semibold leading-none">
-                好人好事<span className="text-hrhs-crimson"> · </span><span className="text-base font-medium">Hao Ren Hao Shi</span>
+                ABC<span className="text-hrhs-crimson"> · </span><span className="text-base font-medium">ABC Charity Drive</span>
               </div>
               <h1 className="text-sm text-stone-300 mt-1.5 tracking-wide">Inventory Management System</h1>
             </div>
