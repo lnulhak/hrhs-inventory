@@ -26,7 +26,7 @@ This inserts 5 sample items so the inventory isn't empty on first login.
 
 **Authentication → Users → Add user → Create new user**
 
-- Email: `admin@hrhs-temp.com` (or any email you choose)
+- Email: `admin@abc-temp.com` (or any email you choose)
 - Password: strong password — save it
 - Check **"Auto Confirm User"**
 

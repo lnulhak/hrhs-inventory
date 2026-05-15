@@ -332,7 +332,7 @@ export default function HRHSInventory() {
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" size={16} />
                     <input
                       type="email"
-                      placeholder="admin@hrhs-temp.com"
+                      placeholder="admin@abc-temp.com"
                       value={loginForm.email}
                       onChange={e => setLoginForm({ ...loginForm, email: e.target.value })}
                       onKeyDown={e => e.key === "Enter" && handleLogin()}

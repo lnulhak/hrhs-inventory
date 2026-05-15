@@ -34,7 +34,7 @@ Once inside, log in as admin:
 
 | | |
 |---|---|
-| Email | `admin@hrhs-temp.com` |
+| Email | `admin@abc-temp.com` |
 | Password | `42sg` |
 
 Or click **Continue as guest** for read-only access without logging in.
@@ -145,7 +145,7 @@ See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for full setup instructions — S
 
 ## Usage
 
-**Admin login:** `admin@hrhs-temp.com` + password set during Supabase user creation  
+**Admin login:** `admin@abc-temp.com` + password set during Supabase user creation  
 **Guest access:** click "Continue as guest" on the login screen — read-only, no account needed  
 **Log an item:** click **Log food** → fill in all required fields → **Save**  
 **Distribute:** tap an item card → **Clear Stock** (whole batch gone) or **Adjust Stock** (enter how many remain)  
