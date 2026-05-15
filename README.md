@@ -21,7 +21,7 @@ ABC is a community charity running food distribution out of a warehouse and comm
 
 ### Option 1 — Live demo (recommended)
 
-Visit **https://hrhs-inventory-demo.vercel.app/**
+Visit **https://abc-inventory-demo.vercel.app/**
 
 The site is password-protected. When the browser prompts, enter:
 
@@ -47,7 +47,7 @@ See the [Installation](#installation) section below.
 
 ## Demo
 
-**Live URL:** https://hrhs-inventory-demo.vercel.app/
+**Live URL:** https://abc-inventory-demo.vercel.app/
 
 ### Walkthrough
 
