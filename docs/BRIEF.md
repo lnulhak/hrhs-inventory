@@ -193,7 +193,7 @@ This account is the only admin in v1. The "create more admins" UI is deferred.
 
 ### Session handling
 - Use Supabase's built-in session management (stored in cookies via `@supabase/ssr`).
-- Middleware (`src/middleware.js`) should refresh the session on every request.
+- Middleware (`middleware.js` at root) should refresh the session on every request.
 - The main page should check session server-side and pass auth state to client components.
 
 ---
@@ -330,7 +330,7 @@ Two hard checkpoints below. If the work isn't at the checkpoint, stop and diagno
 7. **Wire up Supabase client:**
    - Create `src/lib/supabase/client.js` (browser client via `createBrowserClient` from `@supabase/ssr`)
    - Create `src/lib/supabase/server.js` (server client via `createServerClient` from `@supabase/ssr`)
-   - Create `src/middleware.js` for session refresh
+   - Create `middleware.js` at project root for session refresh
 8. **Replace in-memory state with Supabase calls:**
    - Initial load: `supabase.from('items').select('*').order('expiry', { ascending: true })`
    - Add: `supabase.from('items').insert({...})`

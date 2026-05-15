@@ -190,7 +190,6 @@ hrhs-inventory/
 │   │   └── supabase/
 │   │       ├── client.js    # Browser-side Supabase client
 │   │       └── server.js    # Server-side Supabase client (reserved for future SSR)
-│   └── middleware.js        # Basic auth gate for the demo site
 ├── scripts/
 │   ├── schema.sql           # Supabase table definition and RLS policies
 │   └── seed.sql             # Sample data for local/staging setup
@@ -219,7 +218,7 @@ hrhs-inventory/
 
 - **Original stack was AppSheet** — switched to Next.js once the assessment brief was reviewed and a code artifact was clearly required
 - **Mandatory photo upload was in the brief** — reverted to optional, then deferred entirely; requires Supabase Storage, bucket RLS, CORS config, and image compression that would have consumed half the build day
-- **Edge Runtime middleware** — initial attempt used Supabase's Edge Runtime session refresh pattern, which caused `MIDDLEWARE_INVOCATION_FAILED` on Vercel; replaced with a lightweight Basic Auth gate in `src/middleware.js` that runs reliably on the Node.js runtime
+- **Edge Runtime middleware** — initial attempt used Supabase's Edge Runtime session refresh pattern, which caused `MIDDLEWARE_INVOCATION_FAILED` on Vercel; replaced with a lightweight Basic Auth gate in `middleware.js` that runs reliably on the Node.js runtime
 - **`NEXT_PUBLIC_*` env vars not baked into build** — Vercel builds at push time; vars must be set in the Vercel dashboard *before* the build runs, not after
 
 ### What was deferred (v0.9 cuts)
