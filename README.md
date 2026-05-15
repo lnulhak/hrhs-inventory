@@ -6,14 +6,16 @@
 
 ### Problem
 
-Hao Ren Hao Shi (好人好事) is a Singapore-based community charity running food distribution out of a warehouse and community marts. Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, one part-timer kept manual records that were often inaccessible to volunteers. The result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored.
+Hao Ren Hao Shi (好人好事) is a Singapore-based community charity running food distribution out of a warehouse and community marts. 
+
+Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, one part-timer kept manual records that were often inaccessible to volunteers. The result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored if the part-timer isn't working.
 
 ### Outcome
 
 - A shared, mobile-first inventory system where volunteers log incoming and returning food with expiry date, quantity, and location
 - All volunteers across all locations see a single shared view sorted by soonest expiry
 - Admins manage the inventory (add, edit, clear, adjust); guests get read-only access
-- Deployed publicly at **https://hrhs-inventory-demo.vercel.app/**
+- Deployed publicly at **https://hrhs-inventory-demo.vercel.app/** with password-protection (cached, for first time access only)
 
 ---
 
@@ -28,14 +30,14 @@ The site is password-protected. When the browser prompts, enter:
 | | |
 |---|---|
 | Username | `demo` |
-| Password | `<demo-password>` |
+| Password | `42sg` |
 
 Once inside, log in as admin:
 
 | | |
 |---|---|
 | Email | `admin@hrhs-temp.com` |
-| Password | `<admin-password>` |
+| Password | `42sg` |
 
 Or click **Continue as guest** for read-only access without logging in.
 
