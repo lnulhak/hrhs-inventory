@@ -135,37 +135,13 @@ Admins see an **Export CSV** button. The downloaded file opens in Excel or Googl
 | Photo upload | Mandatory → Optional → Deferred | Deferred to v1.1 | Adds friction; requires Supabase Storage, CORS, RLS on buckets, compression, EXIF stripping |
 | Button labels | "All taken / Some taken" | "Clear Stock / Adjust Stock" | More professional; clearer action semantics |
 | App framework | AppSheet | Next.js + Supabase | Produces a stronger, auditable code artifact |
+| Containerisation | Docker | Not dockerised | Both dependencies are fully managed — Vercel handles the Next.js build and serving, Supabase is a hosted Postgres service. There is no self-hosted process to containerise. Docker would add setup friction (install, daemon, compose) with no benefit at this scale; `npm run dev` is sufficient for local development and Vercel CI/CD handles production |
 
 ---
 
 ## Installation
 
-```bash
-git clone https://github.com/lnulhak/hrhs-inventory.git
-cd hrhs-inventory
-npm install
-```
-
-Create a `.env.local` file in the project root with the following:
-
-```env
-# Supabase — get these from your Supabase project settings
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-
-# Basic auth gate for the demo site
-DEMO_USER=demo
-DEMO_PASS=your_chosen_password
-```
-
-Then run:
-
-```bash
-npm run dev
-# Open http://localhost:3000
-```
-
-See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for Supabase schema setup and Vercel deployment.
+See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) for full setup instructions — Supabase schema, environment variables, local development, and Vercel deployment.
 
 ---
 

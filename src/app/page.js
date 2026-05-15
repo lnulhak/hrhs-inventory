@@ -9,6 +9,7 @@ import {
   LogOut, Eye, Lock, ArrowLeft, Mail, Download,
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
+import { daysUntilExpiry, urgencyClass, urgencyLabel } from "@/lib/utils";
 
 // Normalise a Supabase row to the shape the UI expects
 function normalise(row) {
@@ -151,25 +152,6 @@ export default function HRHSInventory() {
   };
 
   // ── Helpers ───────────────────────────────────────────────────────────────
-  const daysUntilExpiry = (dateStr) => {
-    const expiry = new Date(dateStr);
-    return Math.ceil((expiry - today) / (1000 * 60 * 60 * 24));
-  };
-
-  const urgencyClass = (days) => {
-    if (days < 0) return "expired";
-    if (days <= 3) return "critical";
-    if (days <= 7) return "warning";
-    return "ok";
-  };
-
-  const urgencyLabel = (days) => {
-    if (days < 0) return `Expired ${Math.abs(days)}d ago`;
-    if (days === 0) return "Expires today";
-    if (days === 1) return "Expires tomorrow";
-    return `${days} days left`;
-  };
-
   const formatDate = (dateStr) => {
     const d = new Date(dateStr);
     return d.toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });

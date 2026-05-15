@@ -44,14 +44,18 @@ Copy:
 
 ## 2. Environment variables
 
-Create `.env.local` in the project root (copy from `.env.local.example`):
+Create `.env.local` in the project root (copy from `.env.sample`):
 
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+
+DEMO_USER=demo
+DEMO_PASS=your_chosen_password
 ```
 
-These are `NEXT_PUBLIC_` prefixed, meaning they are inlined at build time and visible in client-side code. The anon key is safe to expose — it's restricted by RLS policies on the Supabase side.
+- `NEXT_PUBLIC_*` vars are inlined at build time and visible in client-side code. The anon key is safe to expose — it's restricted by RLS policies on the Supabase side.
+- `DEMO_USER` and `DEMO_PASS` are the credentials for the Basic Auth gate (`middleware.js`). The browser will prompt for these on first visit.
 
 **Never commit `.env.local` to git.** It is in `.gitignore`.
 
@@ -63,8 +67,8 @@ These are `NEXT_PUBLIC_` prefixed, meaning they are inlined at build time and vi
 git clone https://github.com/lnulhak/hrhs-inventory.git
 cd hrhs-inventory
 npm install
-cp .env.local.example .env.local
-# Edit .env.local with your Supabase credentials
+cp .env.sample .env.local
+# Edit .env.local with your Supabase credentials and chosen DEMO_USER/DEMO_PASS
 npm run dev
 # Open http://localhost:3000
 ```
@@ -84,14 +88,18 @@ npm run dev
 
 **Vercel → project → Settings → Environment Variables**
 
-Add both variables, ticking **Production**, **Preview**, and **Development**:
+Add all four variables, ticking **Production**, **Preview**, and **Development**:
 
 | Name | Value |
 |---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | `https://your-project.supabase.co` |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `your-anon-key` |
+| `DEMO_USER` | `demo` |
+| `DEMO_PASS` | `your_chosen_password` |
 
 Save each variable before adding the next.
+
+**Note:** if you change `DEMO_USER` or `DEMO_PASS` after deployment, you must redeploy for the new values to take effect.
 
 ### 4c. Deploy
 
