@@ -1,4 +1,4 @@
-# Inventory Management System
+# ABC Inventory Management System
 
 > **Assessment demo** — this is a prototype built as an academic submission. It is not affiliated with or officially approved by ABC. All data in the live demo is fictional. A production deployment would require the organisation's consent and account ownership transfer per [`docs/MIGRATION.md`](docs/MIGRATION.md).
 
