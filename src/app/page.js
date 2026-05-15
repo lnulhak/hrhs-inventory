@@ -431,7 +431,7 @@ export default function HRHSInventory() {
             </div>
           )}
 
-          <div className="mt-8 text-center text-xs text-stone-400">v0.9 · HRHS Inventory</div>
+          <div className="mt-8 text-center text-xs text-stone-400">v0.9 · ABC Inventory</div>
         </div>
       </div>
     );
