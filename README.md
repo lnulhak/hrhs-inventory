@@ -120,11 +120,11 @@ Admins see an **Export CSV** button. The downloaded file opens in Excel or Googl
 
 ### Key prompts
 
-1. *"No inventory management system at HRHS... how would you go about solving this?"* — opened the problem space and surfaced the expiry-sorting requirement as the core UX priority
-2. *"Can you create a quick prototype?"* — produced `hrhs-inventory.jsx`, the single-file React prototype that defined the entire UI before any framework was chosen
-3. *"Admins should also be required to upload pictures of the food"* — led to pushback: mandatory photo upload adds friction for non-technical volunteers on phones; made optional, then deferred entirely for v0.9
-4. *"Let's switch to Next.js + Supabase"* — stack decision made after reviewing the assessment brief; AppSheet was the original candidate but Next.js produces a stronger code artifact
-5. *"What's the trade-off of client-side auth vs middleware?"* — led to removing the Edge Runtime middleware that was crashing on Vercel and confirming client-side session management is sufficient for this scale
+1. *"No inventory management system at a charity drive (context), how would you go about solving this?"* — opened the problem space, provide context, and brainstorm
+2. *"Can you create a quick prototype?"* — produced `hrhs-inventory.jsx`, the single-file React prototype that defined the entire UI before any framework was chosen, iterated until all user concerns are met
+3. *"Admins should also be required to upload pictures of the food"* — led to pushback: mandatory photo upload adds friction for non-technical volunteers on phones; made optional, then deferred entirely.
+4. *"Let's switch to Next.js + Supabase"* stack decision made after reviewing the assessment brief; AppSheet was the original candidate but Next.js produces a stronger code artifact
+5. *"What's the trade-off of client-side auth vs middleware?"* led to removing the Edge Runtime middleware that was crashing on Vercel and confirming client-side session management is sufficient for this scale
 
 ### Key design decisions
 
