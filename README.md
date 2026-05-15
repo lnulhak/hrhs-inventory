@@ -1,12 +1,12 @@
-# HRHS Inventory Management System
+# Inventory Management System
 
-> **Assessment demo** — this is a prototype built as an academic submission. It is not affiliated with or officially approved by Hao Ren Hao Shi. All data in the live demo is fictional. A production deployment would require the organisation's consent and account ownership transfer per [`docs/MIGRATION.md`](docs/MIGRATION.md).
+> **Assessment demo** — this is a prototype built as an academic submission. It is not affiliated with or officially approved by any company. All data in the live demo is fictional. A production deployment would require the organisation's consent and account ownership transfer per [`docs/MIGRATION.md`](docs/MIGRATION.md).
 
 ## Overview
 
 ### Problem
 
-Hao Ren Hao Shi (好人好事) is a Singapore-based community charity running food distribution out of a warehouse and community marts. 
+ The client is a Singapore-based community charity running food distribution out of a warehouse and community marts. 
 
 Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, one part-timer kept manual records that were often inaccessible to volunteers. The result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored if the part-timer isn't working.
 
