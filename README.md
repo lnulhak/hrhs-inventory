@@ -17,6 +17,34 @@ Hao Ren Hao Shi (好人好事) is a Singapore-based community charity running fo
 
 ---
 
+## Access
+
+### Option 1 — Live demo (recommended)
+
+Visit **https://hrhs-inventory-demo.vercel.app/**
+
+The site is password-protected. When the browser prompts, enter:
+
+| | |
+|---|---|
+| Username | `demo` |
+| Password | `<demo-password>` |
+
+Once inside, log in as admin:
+
+| | |
+|---|---|
+| Email | `admin@hrhs-temp.com` |
+| Password | `<admin-password>` |
+
+Or click **Continue as guest** for read-only access without logging in.
+
+### Option 2 — Run locally
+
+See the [Installation](#installation) section below.
+
+---
+
 ## Demo
 
 **Live URL:** https://hrhs-inventory-demo.vercel.app/
@@ -114,8 +142,23 @@ Admins see an **Export CSV** button. The downloaded file opens in Excel or Googl
 git clone https://github.com/lnulhak/hrhs-inventory.git
 cd hrhs-inventory
 npm install
-cp .env.sample .env.local
-# Fill in your Supabase URL and anon key in .env.local
+```
+
+Create a `.env.local` file in the project root with the following:
+
+```env
+# Supabase — get these from your Supabase project settings
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+
+# Basic auth gate for the demo site
+DEMO_USER=demo
+DEMO_PASS=your_chosen_password
+```
+
+Then run:
+
+```bash
 npm run dev
 # Open http://localhost:3000
 ```
@@ -143,10 +186,11 @@ hrhs-inventory/
 │   │   ├── page.js          # Main inventory app (single-page client component)
 │   │   ├── layout.js        # Root layout with Google Fonts and metadata
 │   │   └── globals.css      # Tailwind v4 config and HRHS brand classes
-│   └── lib/
-│       └── supabase/
-│           ├── client.js    # Browser-side Supabase client
-│           └── server.js    # Server-side Supabase client (reserved for future SSR)
+│   ├── lib/
+│   │   └── supabase/
+│   │       ├── client.js    # Browser-side Supabase client
+│   │       └── server.js    # Server-side Supabase client (reserved for future SSR)
+│   └── middleware.js        # Basic auth gate for the demo site
 ├── scripts/
 │   ├── schema.sql           # Supabase table definition and RLS policies
 │   └── seed.sql             # Sample data for local/staging setup
@@ -157,7 +201,6 @@ hrhs-inventory/
 │   └── SCHEMA.md            # Table schema and RLS policy reference
 ├── assets/
 │   └── screenshots/         # UI screenshots for README
-├── public/                  # Next.js static file serving
 ├── tests/                   # Reserved — tests are future work (see Reflection)
 └── .env.sample              # Environment variable template
 ```
@@ -176,7 +219,7 @@ hrhs-inventory/
 
 - **Original stack was AppSheet** — switched to Next.js once the assessment brief was reviewed and a code artifact was clearly required
 - **Mandatory photo upload was in the brief** — reverted to optional, then deferred entirely; requires Supabase Storage, bucket RLS, CORS config, and image compression that would have consumed half the build day
-- **Edge Runtime middleware** — added for auth protection, then removed when it caused `MIDDLEWARE_INVOCATION_FAILED` on Vercel; client-side session management is sufficient for this scale
+- **Edge Runtime middleware** — initial attempt used Supabase's Edge Runtime session refresh pattern, which caused `MIDDLEWARE_INVOCATION_FAILED` on Vercel; replaced with a lightweight Basic Auth gate in `src/middleware.js` that runs reliably on the Node.js runtime
 - **`NEXT_PUBLIC_*` env vars not baked into build** — Vercel builds at push time; vars must be set in the Vercel dashboard *before* the build runs, not after
 
 ### What was deferred (v0.9 cuts)
