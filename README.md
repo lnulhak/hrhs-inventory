@@ -6,9 +6,7 @@
 
 ### Problem
 
- The client is a Singapore-based community charity running food distribution out of a warehouse and community marts. 
-
-Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, one part-timer kept manual records that were often inaccessible to volunteers. The result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored if the part-timer isn't working.
+ The client is a Singapore-based community charity running food distribution out of a warehouse and community marts. Food donations arrive from corporates, individuals, and surplus near-expiry stock — but with no shared inventory system, and only one part-timer keeping manual records that were often inaccessible to volunteers, the result was food waste: nobody could see what was expiring at which location, and volunteers couldn't tell what was returned from events and where it was stored if the part-timer isn't working.
 
 ### Outcome
 
